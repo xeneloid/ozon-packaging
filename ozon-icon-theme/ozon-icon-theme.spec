@@ -1,28 +1,35 @@
+%global theme	Ozon
+
 Name:		ozon-icon-theme
 Version:	0.1.0
 Release:	1%{?dist}
 Summary:	Default icon theme for OzonOS.
 Group:		User Interface/Desktops
-License:	GPL-3.0+
+
+License:	GPL-3
 URL:		https://github.com/ozonos/ozon-icon-theme
 Source0:	%{name}-%{version}.tar.gz
+
 BuildArch:  noarch
 
 %description
- This is the default icon theme for OzonOS. It's licensed under the GNU GPLv3+.
+ %{theme} is the official icon theme for Ozon OS.
+
 
 %prep
 %setup -q
 
+
 %install
-make install DESTDIR=%{buildroot}
+%make_install
+
 
 %files
 %defattr(-,root,root)
-/usr/share/icons/Ozon/
+%{_datadir}/icons/%{theme}
 
 %changelog
-* Sat Jan 10 06:27:21 UTC 2015 Markus S. <kamikazow@web.de>
+* Sat Jan 10 2015 Markus S. <kamikazow@web.de>
 - BuildArch: noarch
 - SPDX License Identifier
 - Use variables for source file name
