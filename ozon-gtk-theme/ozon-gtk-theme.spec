@@ -1,4 +1,5 @@
 %global theme	Ozon
+%global channel master
 
 Name:		ozon-gtk-theme
 Version:	0.1
@@ -7,8 +8,8 @@ Summary:	%{theme} GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPL-3
-URL:		http://fav.me/d5ygul6
-Source0:	ozon-gtk-theme.tar.gz
+URL:		http://ozonos.github.io
+Source0:	%{name}.tar.gz
 
 BuildRequires:	rubygem-sass >= 3.4.0
 
@@ -22,7 +23,7 @@ BuildArch:	noarch
 
 
 %prep
-%setup -q -n %{name}-master
+%setup -q -n %{name}-%{channel}
 
 %build
 make %{?_smp_mflags}
