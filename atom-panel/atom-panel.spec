@@ -1,21 +1,28 @@
 Name:		atom-panel
 Version:	0.1.0
 Release:	1%{?dist}
-Summary:	A custom dock extension for gnome-shell.
+Summary:	Atom panel extension for gnome-shell.
 Group:		User Interface/Desktops
-License:	GPLv3+
-URL:		https://github.com/ozonos/atom-dock
-Source0:	atom-panel-0.1.0.tar.gz
+
+License:	GPL-3
+URL:		https://github.com/ozonos/atom-panel
+Source0:	%{name}-%{version}.tar.gz
+
+Requires:	gnome-shell >= 3.12.0
+
+BuildArch:	noarch
 
 %description
  A custom panel for gnome-shell.
- This panel is part of the Atom Extension Set designed for Ozon OS.
+
 
 %prep
 %setup -q
 
+
 %install
-make install DESTDIR=%{buildroot}
+%make_install
+
 
 %files
 %defattr(-,root,root)

@@ -1,11 +1,16 @@
 Name:		atom-dock
 Version:	0.1.0
 Release:	1%{?dist}
-Summary:	A custom dock extension for gnome-shell.
+Summary:	Atom dock extension for gnome-shell.
 Group:		User Interface/Desktops
-License:	GPLv3+
+
+License:	GPL-3
 URL:		https://github.com/ozonos/atom-dock
-Source0:	atom-dock-0.1.0.tar.gz
+Source0:	%{name}-%{version}.tar.gz
+
+Requires:	gnome-shell >= 3.12.0
+
+BuildArch:	noarch
 
 %description
  A custom dock extension for gnome-shell. 
@@ -15,11 +20,14 @@ Source0:	atom-dock-0.1.0.tar.gz
  per workspace task separation, transparent background on 
  App Overview, and many other planned features.
 
+
 %prep
 %setup -q
 
+
 %install
-make install DESTDIR=%{buildroot}
+%make_install
+
 
 %files
 %defattr(-,root,root)

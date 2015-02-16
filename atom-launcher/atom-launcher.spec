@@ -1,20 +1,29 @@
 Name:		atom-launcher
 Version:	0.1.0
 Release:	1%{?dist}
-Summary:	A custom dock extension for gnome-shell.
+Summary:	Atom launcher extension for gnome-shell.
 Group:		User Interface/Desktops
-License:	GPLv3+
-URL:		https://github.com/ozonos/atom-dock
-Source0:	atom-launcher-0.1.0.tar.gz
+
+License:	GPL-3
+URL:		https://github.com/ozonos/atom-launcher
+Source0:	%{name}-%{version}.tar.gz
+
+Requires:	gnome-shell >= 3.12.0
+
+BuildArch:	noarch
 
 %description
- A simplified App Launcher with applications sorted by frequency of use.
+ A simplified Application Launcher with applications sorted by frequency
+ of use.
+
 
 %prep
 %setup -q
 
+
 %install
-make install DESTDIR=%{buildroot}
+%make_install
+
 
 %files
 %defattr(-,root,root)
