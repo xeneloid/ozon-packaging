@@ -11,6 +11,7 @@ URL:		http://ozonos.github.io
 Source0:	%{name}-%{version}.tar.gz
 
 Requires:	gnome-shell >= 3.12.0
+Requires:   google-noto-sans-fonts
 
 BuildArch:	noarch
 
