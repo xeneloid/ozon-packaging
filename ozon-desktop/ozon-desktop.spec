@@ -9,9 +9,8 @@ Group:          System Environment/Base
 URL:            http://ozonos.github.io
 
 Requires:       ozon-release = %{version}
-Requires:       ozon-repos
 Requires:       ozon-artwork
-Requires:       ozon-wallpapers
+Requires:       ozon-backgrounds
 Requires:       ozon-gtk-theme
 Requires:       ozon-shell-theme
 Requires:       atom-dock
