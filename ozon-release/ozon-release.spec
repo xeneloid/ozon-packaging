@@ -10,7 +10,7 @@ Group:          System Environment/Base
 
 URL:            http://ozonos.github.io
 Source:         %{name}-%{version}.tar.gz
-Requires:       fedora-release(%{version})
+Requires:       fedora-release = %{version}
 
 BuildArch:      noarch
 
