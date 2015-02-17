@@ -19,7 +19,7 @@ Font configuration for Ozon desktop.
 
 %install
 %{__install} -d -m755 %{buildroot}/etc/fonts/
-cat << EOF >>%{buildroot}/etc/fonts/ozon.conf
+cat << EOF >>%{buildroot}/etc/fonts/local.conf
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
@@ -57,7 +57,7 @@ EOF
 
 %files
 %defattr(-,root,root,-)
-%config %attr(0644,root,root) /etc/fonts/ozon.conf
+%config %attr(0644,root,root) /etc/fonts/local.conf
 
 
 %changelog
