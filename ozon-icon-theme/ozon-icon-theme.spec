@@ -1,7 +1,7 @@
 %global theme	Ozon
 
 Name:		ozon-icon-theme
-Version:	0.1.0
+Version:	0.1
 Release:	1%{?dist}
 Summary:	Default icon theme for OzonOS.
 Group:		User Interface/Desktops
