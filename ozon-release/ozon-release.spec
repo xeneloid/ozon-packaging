@@ -1,10 +1,9 @@
-%define release_name Twenty One
-%define dist_version 21
+%define codename Hydrogen
 
 Summary:        Ozon release files
 Name:           ozon-release
 Version:        21
-Release:        0
+Release:        1%{?dist}
 License:        MIT
 Group:          System Environment/Base
 
@@ -26,9 +25,7 @@ Ozon release files and default settings.
 
 %install
 %{__install} -d -m755 %{buildroot}/etc
-echo "Ozon release %{version} (%{release_name})" > %{buildroot}/etc/ozon-release
-
-# Override the list of enabled gnome-shell extensions for Workstation
+echo "Ozon release %{version} (%{codename})" > %{buildroot}/etc/ozon-release
 %{__install} -d -m755 %{buildroot}%{_datadir}/glib-2.0/schemas/
 %{__install} -m 0644 org.ozonos.gschema.override %{buildroot}%{_datadir}/glib-2.0/schemas/
 

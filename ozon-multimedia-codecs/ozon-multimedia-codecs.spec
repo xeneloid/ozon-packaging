@@ -1,7 +1,7 @@
 Summary:		Ozon multimedia codecs
 Name:			ozon-multimedia-codecs
 Version:		21
-Release:		0
+Release:		1%{?dist}
 
 License:		GPL-3
 Group:			System Environment/Base

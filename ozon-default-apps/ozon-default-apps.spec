@@ -1,7 +1,7 @@
 Summary:		Ozon default applications
 Name:			ozon-default-apps
 Version:		21
-Release:		0
+Release:		1%{?dist}
 
 License:		GPL-3
 Group:			System Environment/Base
@@ -18,8 +18,8 @@ Requires:		gnome-calculator >= 3.14.0
 Requires:		gnome-software >= 3.14.0
 Requires:		gnome-tweak-tool >= 3.14.0
 
-Recommends:		gthumb
-Recommends:		chromium
+Requires:		gthumb
+Requires:		chromium
 Requires:		tomahawk
 Requires:		steam
 
