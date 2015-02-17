@@ -18,7 +18,7 @@ BuildArch:  noarch
 cat << EOF >>%{buildroot}/etc/yum.repos.d/ozonos.repo
 [ozonos]
 name=Repository for Ozon OS
-baseurl=http://104.236.21.111/repo/$releasever/
+baseurl=http://104.236.21.111/repo/\$releasever/
 gpgcheck=0
 enabled=1
 skip_if_unavailable=1
