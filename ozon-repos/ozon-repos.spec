@@ -22,6 +22,13 @@ baseurl=http://104.236.21.111/repo/\$releasever/
 gpgcheck=0
 enabled=1
 skip_if_unavailable=1
+
+[ozonos-source]
+name=Repository for Ozon OS
+baseurl=http://104.236.21.111/repo/\$releasever/SRPMS/
+gpgcheck=0
+enabled=1
+skip_if_unavailable=1
 EOF
 
 
