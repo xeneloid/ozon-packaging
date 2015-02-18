@@ -13,6 +13,7 @@ Requires:		ozon-default-apps = %{version}
 Requires:		ozon-multimedia-codecs = %{version}
 Requires:		ozon-font-config = %{version}
 Requires:		ozon-backgrounds = %{version}
+Requires:		ozon-icon-theme
 Requires:		ozon-gtk-theme
 Requires:		ozon-shell-theme
 Requires:		atom-experience = %{version}
