@@ -2,27 +2,38 @@
 # CAUTION - We need to test the generated .ISO file. Don't "well ... duh" me, it is important
 
 version=Beta
-#What the heck is KS?
+#What the heck these KS files do here, I've no idea
 #ks=http://127.0.0.1/ks.cfg
 #ks=http://localhost/ks.cfg
+
 # I guess we should replace that with Ozon's .iso link?
 url --url http://mirrors.kernel.org/fedora/releases/21/Workstation/x86_64/iso/
 
-install
+#Shitload of services
+services --enabled=ksmtuned,lirc,NetworkManager,restorecond,spice-vdagentd --disabled=abrtd,abrt-ccpp,abrt-oops,abrt-vmcore,abrt-xorg,capi,iprdump,iprinit,iprupdate,iscsi,iscsid,isdn,libvirtd,multipathd,netfs,network,nfs,nfslock,pcscd,rpcbind,rpcgssd,rpcidmapd,rpcsvcgssd,sendmail,sm-client,sshd
+
+#Include repos
+%include %%KP_KICKSTART_DIR%%/ozon-repos.ks
 
 #Not sure if that means booting from CD room or installing cd room components. If latter it and the #usb option must be without a #
 #cdrom
 #usb
+
 #Because "u" matters
 lang en_GB.UTF-8
 #Should change that to grumpy US layout. Sigh.
 keyboard gb
+
 #I hope that using just the activate on boot flag will make it aumomagically detect connection type and jada jada
 network --onboot yes 
+
 #Figured defaulting to GMT would be the sanest option
 timezone --utc Europe/London
+
 # Whatever the hell rootpw is supposed to be
 # rootpw  --iscrypted $6$s9i1bQbmW4oSWMJc$0oHfSz0b/d90EvHx7cy70RJGIHrP1awzAgL9A3x2tbkyh72P3kN41vssaI3/SJf4Y4qSo6zxc2gZ3srzc4ACX1
+
+#Some security stuff
 selinux --permissive
 authconfig --enableshadow --passalgo=sha512 --enablefingerprint
 # I take it we don't need firewall, right? 
@@ -53,6 +64,8 @@ authconfig --enableshadow --passalgo=sha512 --enablefingerprint
 
 %packages
 @admin-tools
+#Not sure about that standard
+@standard
 @fonts
 @gnome-desktop
 @hardware-support
@@ -60,13 +73,20 @@ authconfig --enableshadow --passalgo=sha512 --enablefingerprint
 @online-docs
 @printing
 @base-x
-xfsprogs
 gdm
 ozon-repos
 ozon-repos-extra
 ozon-desktop
+#We uninstall gThumb and Steam and install eog for the beta
+-gthumb
+-steam
+eog
+#Some driver
+b43-firmware
 %end
 
-# Reboot after installation
-reboot
+#Shouldn't that kickstart the installation?
+install
+
+#During rbeooting ask the use to eject the live DVD if he/she still uses that stuff.
 eject
