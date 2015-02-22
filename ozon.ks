@@ -17,7 +17,7 @@ repo --name=rpmfusion-non-free-updates --baseurl=http://download1.rpmfusion.org/
 repo --name="Copr repo for chromium owned by spot" --baseurl=https://copr-be.cloud.fedoraproject.org/results/spot/chromium/fedora-$releasever-$basearch/ --cost=1000
 
 %packages
-# Exclude unwanted groups that fedora-live-base.ks pulls in
+# Exclude unwanted groups that fedora-live-workstation.ks pulls in
 -@libreoffice
 
 # Install Ozon desktop
