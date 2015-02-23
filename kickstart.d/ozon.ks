@@ -85,7 +85,7 @@ eog
 b43-firmware
 %end
 
-#Shouldn't that kickstart the installation?
+#Shouldn't that kickstart the installation? Pun so not intended. LOL.
 install
 
 #During rbeooting ask the use to eject the live DVD if he/she still uses that stuff.

@@ -46,6 +46,7 @@ gcc-c++
 akmod-wl
 isight-firmware-tools
 eog
+gnome-screenshot
 
 # Remove unwanted packages
 -gthumb
