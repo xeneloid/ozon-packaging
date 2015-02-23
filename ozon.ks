@@ -47,6 +47,7 @@ akmod-wl
 isight-firmware-tools
 eog
 gnome-screenshot
+file-roller
 
 # Remove unwanted packages
 -gthumb
