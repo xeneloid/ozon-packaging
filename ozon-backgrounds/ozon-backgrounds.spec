@@ -2,7 +2,7 @@
 
 Name:           ozon-backgrounds
 Version:        21
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Ozon desktop backgrounds
 
 Group:          Applications/Multimedia
@@ -29,7 +29,7 @@ python update-properties.py > %{buildroot}%{_datadir}/gnome-background-propertie
 %{__install} -d -m755 %{buildroot}%{_datadir}/glib-2.0/schemas/
 cat << EOF >>%{buildroot}%{_datadir}/glib-2.0/schemas/20_org.gnome.desktop.background.ozon.gschema.override
 [org.gnome.desktop.background]
-picture-uri='file://%{_datadir}/backgrounds/%{bgname}/ozon.jpg'
+picture-uri='file://%{_datadir}/backgrounds/%{bgname}/clouds_by_robert_hoe.jpg'
 EOF
 
 %postun
