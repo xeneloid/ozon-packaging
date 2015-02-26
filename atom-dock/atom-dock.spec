@@ -1,5 +1,5 @@
 Name:		atom-dock
-Version:	0.1.0
+Version:	0.2
 Release:	1%{?dist}
 Summary:	Atom dock extension for gnome-shell.
 Group:		User Interface/Desktops
@@ -36,3 +36,4 @@ BuildArch:	noarch
 %changelog
 * Thu Nov 27 2014 Paolo Rotolo <paolorotolo@ubuntu.com> - 0.1.0-1
 - Initial package for Fedora
+
