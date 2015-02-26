@@ -1,7 +1,7 @@
 Name:		ozon-repos
 Version:	21
-Release:	1%{?dist}
-Summary:	Repositories for Ozon.
+Release:	2%{?dist}
+Summary:	Repositories for Ozon OS.
 Group:		System Environment/Base
 
 License:	GPL-3
@@ -10,7 +10,7 @@ URL:		http://ozonos.github.io
 BuildArch:  noarch
 
 %description
- Deafult repositories used in Ozon OS.
+ Default repositories used in Ozon OS.
 
 
 %install
@@ -18,14 +18,7 @@ BuildArch:  noarch
 cat << EOF >>%{buildroot}/etc/yum.repos.d/ozonos.repo
 [ozonos]
 name=Repository for Ozon OS
-baseurl=http://104.236.21.111/repo/\$releasever/
-gpgcheck=0
-enabled=1
-skip_if_unavailable=1
-
-[ozonos-source]
-name=Repository for Ozon OS
-baseurl=http://104.236.21.111/repo/\$releasever/SRPMS/
+baseurl=http://goodies.ozon-os.com/repo/\$releasever/
 gpgcheck=0
 enabled=1
 skip_if_unavailable=1
