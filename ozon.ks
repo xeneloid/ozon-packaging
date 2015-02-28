@@ -41,8 +41,6 @@ ozon-repos
 ozon-repos-extra
 ozon-desktop
 
-gcc
-gcc-c++
 akmod-wl
 isight-firmware-tools
 eog
