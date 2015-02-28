@@ -48,6 +48,7 @@ isight-firmware-tools
 eog
 gnome-screenshot
 file-roller
+gnome-system-monitor
 
 # Remove unwanted packages
 -gthumb
