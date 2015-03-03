@@ -41,11 +41,15 @@ ozon-repos
 ozon-repos-extra
 ozon-desktop
 
+gcc
+gcc-c++
+dkms
 akmod-wl
 isight-firmware-tools
 eog
 gnome-screenshot
 file-roller
+file-roller-nautilus
 gnome-system-monitor
 
 # Remove unwanted packages
