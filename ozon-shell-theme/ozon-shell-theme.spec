@@ -1,7 +1,7 @@
 %global theme	Ozon
 
 Name:		ozon-shell-theme
-Version:	0.2
+Version:	0.3
 Release:	1%{?dist}
 Summary:	%{theme} theme for Gnome Shell
 Group:		User Interface/Desktops

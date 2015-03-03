@@ -1,5 +1,5 @@
 Name:		atom-panel
-Version:	0.1.0
+Version:	0.3
 Release:	1%{?dist}
 Summary:	Atom panel extension for gnome-shell.
 Group:		User Interface/Desktops
