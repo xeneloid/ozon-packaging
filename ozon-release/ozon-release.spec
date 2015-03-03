@@ -3,7 +3,7 @@
 Summary:        Ozon release files
 Name:           ozon-release
 Version:        21
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        MIT
 Group:          System Environment/Base
 
