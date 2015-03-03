@@ -1,14 +1,14 @@
 Name:		ozon-repos-extra
 Version:	21
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Extra repositories for Ozon.
 Group:		System Environment/Base
 
 License:	GPL-3
 URL:		http://ozonos.github.io
 
-Requires: rpmfusion-free
-Requires: rpmfusion-nonfree
+Requires: rpmfusion-free-release
+Requires: rpmfusion-nonfree-release
 
 BuildArch:  noarch
 
