@@ -1,6 +1,6 @@
 Name:		ozon-repos
 Version:	21
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	Repositories for Ozon OS.
 Group:		System Environment/Base
 
@@ -21,9 +21,11 @@ cat << EOF >>%{buildroot}%{_sysconfdir}/yum.repos.d/ozonos.repo
 [ozonos]
 name=Repository for Ozon OS
 baseurl=http://goodies.ozon-os.com/repo/\$releasever/
-gpgcheck=0
 enabled=1
 skip_if_unavailable=1
+metadata_expire=7d
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ozonos
 EOF
 
 %{__install} -d -m755 %{buildroot}%{_sysconfdir}/pki/rpm-gpg
