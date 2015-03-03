@@ -46,7 +46,6 @@ gcc-c++
 dkms
 akmod-wl
 isight-firmware-tools
-eog
 gnome-screenshot
 file-roller
 file-roller-nautilus
