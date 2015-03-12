@@ -45,11 +45,13 @@ gcc
 gcc-c++
 dkms
 akmod-wl
+broadcom-wl
 isight-firmware-tools
 gnome-screenshot
 file-roller
 file-roller-nautilus
 gnome-system-monitor
+evince
 
 # Remove unwanted packages
 -gthumb
