@@ -47,6 +47,7 @@ dkms
 akmod-wl
 broadcom-wl
 isight-firmware-tools
+libmtp
 gnome-screenshot
 file-roller
 file-roller-nautilus
