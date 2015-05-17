@@ -1,6 +1,6 @@
 Name:		ozon-repos
 Version:	21
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Repositories for Ozon OS.
 Group:		System Environment/Base
 
@@ -23,7 +23,7 @@ name=Repository for Ozon OS
 baseurl=http://goodies.ozon-os.com/repo/\$releasever/
 enabled=1
 skip_if_unavailable=1
-metadata_expire=7d
+metadata_expire=1d
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ozonos
 EOF
