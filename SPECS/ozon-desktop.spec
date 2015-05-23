@@ -1,7 +1,7 @@
 Summary:	Ozon desktop
 Name:		ozon-desktop
 Version:	%{fedora}
-Release:	1%{?dist}
+Release:	2%{?dist}
 
 License:	GPL-3
 Group:		System Environment/Base
@@ -11,6 +11,7 @@ URL:		http://ozonos.github.io
 Requires:	ozon-release = %{version}
 Requires:	ozon-default-apps = %{version}
 Requires:	ozon-multimedia-codecs = %{version}
+Requires:	ozon-drivers = %{version}
 Requires:	ozon-font-config = %{version}
 Requires:	ozon-backgrounds = %{version}
 Requires:	ozon-icon-theme
