@@ -41,19 +41,6 @@ ozon-repos
 ozon-repos-extra
 ozon-desktop
 
-gcc
-gcc-c++
-dkms
-akmod-wl
-broadcom-wl
-isight-firmware-tools
-libmtp
-gnome-screenshot
-file-roller
-file-roller-nautilus
-gnome-system-monitor
-evince
-
 # Remove unwanted packages
 -gthumb
 -bijiben
