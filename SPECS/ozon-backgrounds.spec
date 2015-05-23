@@ -1,17 +1,17 @@
 %global bgname	ozon
 
-Name:           ozon-backgrounds
-Version:        21
-Release:        2%{?dist}
-Summary:        Ozon desktop backgrounds
+Name:		ozon-backgrounds
+Version:	%{fedora}
+Release:	2%{?dist}
+Summary:	Ozon desktop backgrounds
 
-Group:          Applications/Multimedia
-License:        CC-BY-SA
+Group:		Applications/Multimedia
+License:	CC-BY-SA
 
-URL:            http://ozonos.github.io
-Source0:        %{name}-%{version}.tar.gz
+URL:		http://ozonos.github.io
+Source0:	%{name}-%{version}.tar.gz
 
-BuildArch:      noarch
+BuildArch:	noarch
 
 %description
 Desktop backgrounds for Ozon OS.

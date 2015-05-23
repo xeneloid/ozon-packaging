@@ -1,24 +1,24 @@
-Summary:		Ozon desktop
-Name:			ozon-desktop
-Version:		21
-Release:		1%{?dist}
+Summary:	Ozon desktop
+Name:		ozon-desktop
+Version:	%{fedora}
+Release:	1%{?dist}
 
-License:		GPL-3
-Group:			System Environment/Base
+License:	GPL-3
+Group:		System Environment/Base
 
-URL:			http://ozonos.github.io
+URL:		http://ozonos.github.io
 
-Requires:		ozon-release = %{version}
-Requires:		ozon-default-apps = %{version}
-Requires:		ozon-multimedia-codecs = %{version}
-Requires:		ozon-font-config = %{version}
-Requires:		ozon-backgrounds = %{version}
-Requires:		ozon-icon-theme
-Requires:		ozon-gtk-theme
-Requires:		ozon-shell-theme
-Requires:		atom-experience = %{version}
+Requires:	ozon-release = %{version}
+Requires:	ozon-default-apps = %{version}
+Requires:	ozon-multimedia-codecs = %{version}
+Requires:	ozon-font-config = %{version}
+Requires:	ozon-backgrounds = %{version}
+Requires:	ozon-icon-theme
+Requires:	ozon-gtk-theme
+Requires:	ozon-shell-theme
+Requires:	atom-experience = %{version}
 
-BuildArch:		noarch
+BuildArch:	noarch
 
 
 %description

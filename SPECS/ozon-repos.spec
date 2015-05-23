@@ -1,5 +1,5 @@
 Name:		ozon-repos
-Version:	21
+Version:	%{fedora}
 Release:	5%{?dist}
 Summary:	Repositories for Ozon OS.
 Group:		System Environment/Base
@@ -9,7 +9,7 @@ URL:		http://ozonos.github.io
 
 Requires:       system-release >= %{version}
 
-BuildArch:  noarch
+BuildArch:	noarch
 
 %description
  Default repositories used in Ozon OS.

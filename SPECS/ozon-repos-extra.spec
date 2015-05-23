@@ -1,5 +1,5 @@
 Name:		ozon-repos-extra
-Version:	21
+Version:	%{fedora}
 Release:	3%{?dist}
 Summary:	Extra repositories for Ozon.
 Group:		System Environment/Base
@@ -7,10 +7,10 @@ Group:		System Environment/Base
 License:	GPL-3
 URL:		http://ozonos.github.io
 
-Requires: rpmfusion-free-release
-Requires: rpmfusion-nonfree-release
+Requires:	rpmfusion-free-release
+Requires:	rpmfusion-nonfree-release
 
-BuildArch:  noarch
+BuildArch:	noarch
 
 %description
  Extra repositories used in Ozon OS.

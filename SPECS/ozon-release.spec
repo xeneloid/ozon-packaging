@@ -1,17 +1,17 @@
 %define codename Hydrogen
 
-Summary:        Ozon release files
-Name:           ozon-release
-Version:        21
-Release:        2%{?dist}
-License:        MIT
-Group:          System Environment/Base
+Summary:	Ozon release files
+Name:		ozon-release
+Version:	%{fedora}
+Release:	2%{?dist}
+License:	MIT
+Group:		System Environment/Base
 
-URL:            http://ozonos.github.io
-Source:         %{name}-%{version}.tar.gz
-Requires:       fedora-release = %{version}
+URL:		http://ozonos.github.io
+Source:		%{name}-%{version}.tar.gz
+Requires:	fedora-release = %{version}
 
-BuildArch:      noarch
+BuildArch:	noarch
 
 %description
 Ozon release files and default settings.

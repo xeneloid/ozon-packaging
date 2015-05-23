@@ -1,17 +1,17 @@
-Summary:        Ozon font configuration
-Name:           ozon-font-config
-Version:        21
-Release:        1%{?dist}
+Summary:	Ozon font configuration
+Name:		ozon-font-config
+Version:	%{fedora}
+Release:	1%{?dist}
 
-License:        GPL-3
-Group:          System Environment/Base
+License:	GPL-3
+Group:		System Environment/Base
 
-URL:            http://ozonos.github.io
+URL:		http://ozonos.github.io
 
-Requires:       freetype-freeworld
-Requires:       google-noto-sans-fonts
+Requires:	freetype-freeworld
+Requires:	google-noto-sans-fonts
 
-BuildArch:      noarch
+BuildArch:	noarch
 
 %description
 Font configuration for Ozon desktop.
