@@ -1,6 +1,6 @@
 Name:		fedy
 Version:	4.0.0
-Release:	1
+Release:	1%{?dist}
 Summary:	Software, codec installs and system tweaks
 Group:		System/Management
 
