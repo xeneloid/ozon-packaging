@@ -1,7 +1,7 @@
 Summary:	Ozon default applications
 Name:		ozon-default-apps
 Version:	%{fedora}
-Release:	1%{?dist}
+Release:	2%{?dist}
 
 License:	GPL-3
 Group:		System Environment/Base
@@ -12,16 +12,23 @@ Requires:	gnome-shell >= 3.14.0
 Requires:	gnome-terminal >= 3.14.0
 Requires:	gedit >= 3.14.0
 Requires:	nautilus >= 3.14.0
+Requires:	file-roller >= 3.14.0
+Requires:	file-roller-nautilus >= 3.14.0
 Requires:	totem >= 3.14.0
 Requires:	gnome-disk-utility >= 3.14.0
 Requires:	gnome-calculator >= 3.14.0
+Requires:	gnome-screenshot >= 3.14.0
 Requires:	gnome-software >= 3.14.0
+Requires:	gnome-system-monitor >= 3.14.0
 Requires:	gnome-tweak-tool >= 3.14.0
 
 Requires:	gthumb
 Requires:	chromium
 Requires:	tomahawk
 Requires:	steam
+
+Requires:	preload
+Requires:	libmtp
 
 
 BuildArch:	noarch
