@@ -1,5 +1,5 @@
 Name:		fedy
-Version:	4.0.0
+Version:	4.0.1
 Release:	1%{?dist}
 Summary:	Software, codec installs and system tweaks
 Group:		System/Management
