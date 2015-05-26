@@ -1,5 +1,5 @@
 Name:		fedy
-Version:	4.0.1
+Version:	4.0.2
 Release:	1%{?dist}
 Summary:	Software, codec installs and system tweaks
 Group:		System/Management
@@ -11,17 +11,8 @@ Source0:	%{name}-%{version}.tar.gz
 
 Obsoletes:	fedorautils
 
-Requires:	gjs
-Requires:	gtk3
-Requires:	coreutils
-Requires:	sed
-Requires:	tar
-Requires:	wget
-Requires:	dnf
-Requires:	dnf-plugins-core
-Requires:	rpmfusion-free-release
-Requires:	rpmfusion-nonfree-release
-Requires:	ozon-repos
+Requires:	fedy-core
+Requires:	fedy-plugins
 
 BuildArch:	noarch
 
@@ -39,23 +30,45 @@ much more with just a few clicks.
 %install
 make install DESTDIR=%{buildroot}
 
-%post
-update-desktop-database &> /dev/null || :
-touch --no-create %{_datadir}/icons/hicolor || :
-if [ -x %{_bindir}/gtk-update-icon-cache ]; then
-   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
-fi
-
-%postun
-update-desktop-database &> /dev/null || :
-touch --no-create %{_datadir}/icons/hicolor || :
-if [ -x %{_bindir}/gtk-update-icon-cache ]; then
-   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
-fi
-
 %files
 %defattr(-,root,root)
+
+
+
+%package core
+
+Summary: Core files for Fedy
+
+Requires:	gjs
+Requires:	gtk3
+Requires:	coreutils
+Requires:	sed
+Requires:	tar
+Requires:	wget
+Requires:	dnf
+Requires:	dnf-plugins-core
+
+%description core
+Core files for Fedy which can load and display plugins.
+
+%post core
+update-desktop-database &> /dev/null || :
+touch --no-create %{_datadir}/icons/hicolor || :
+if [ -x %{_bindir}/gtk-update-icon-cache ]; then
+   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
+fi
+
+%postun core
+update-desktop-database &> /dev/null || :
+touch --no-create %{_datadir}/icons/hicolor || :
+if [ -x %{_bindir}/gtk-update-icon-cache ]; then
+   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
+fi
+
+%files core
+%defattr(-,root,root)
 %doc COPYING CREDITS README.md
+%exclude %{_datadir}/%{name}/plugins
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
@@ -63,8 +76,30 @@ fi
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_bindir}/%{name}
 
+
+
+%package plugins
+
+Summary: Plugins for Fedy
+
+Requires:	rpmfusion-free-release
+Requires:	rpmfusion-nonfree-release
+Requires:	ozon-repos
+
+%description plugins
+Collection of various plugins for fedy to install multimedia codecs,
+additional software etc.
+
+%files plugins
+%defattr(-,root,root)
+%{_datadir}/%{name}/plugins
+
+
+
 %changelog
 
+* Wed May 27 2015 Satyajit Sahoo <satyajit.happy@gmail.com> 4.0.2
+- split package into core and plugins
 * Sun May 17 2015 Satyajit Sahoo <satyajit.happy@gmail.com> 4.0.0
 - major rewrite
 * Sun Jan 26 2014 Satyajit Sahoo <satyajit.happy@gmail.com> 3.1.6
