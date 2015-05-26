@@ -1,15 +1,15 @@
 %global theme	Ozon
-%global channel master
+%global ref dce2db3
 
 Name:		ozon-gtk-theme
 Version:	0.1
-Release:	alpha1%{?dist}
+Release:	git%{ref}%{?dist}
 Summary:	%{theme} GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPL-3
 URL:		http://ozonos.github.io
-Source0:	%{name}.tar.gz
+Source0:	%{name}-%{ref}.tar.gz
 
 BuildRequires:	rubygem-sass >= 3.4.0
 
@@ -23,7 +23,7 @@ BuildArch:	noarch
 
 
 %prep
-%setup -q -n %{name}-%{channel}
+%setup -q -n %{name}-%{ref}
 
 %build
 make %{?_smp_mflags}
@@ -39,6 +39,6 @@ make %{?_smp_mflags}
 
 
 %changelog
-* Sat Feb 16 2015 Satyajit Sahoo <satya164@fedoraproject.org> - 0.0-1
+* Wed May 27 2015 Satyajit Sahoo <satya164@fedoraproject.org> - 0.0-1
 - Initial package for Fedora
 
