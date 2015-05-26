@@ -8,9 +8,9 @@ License: GPLv2+
 Group: User Interface/X
 
 BuildRequires: gtk3-devel
-BuildRequires: glib2-devel 
+BuildRequires: glib2-devel
 BuildRequires: exiv2-devel 
-Buildrequires: libopenraw-gnome-devel
+BuildRequires: libopenraw-gnome-devel
 BuildRequires: clutter-gtk-devel
 BuildRequires: gstreamer1-devel
 BuildRequires: gstreamer1-plugins-base-devel
