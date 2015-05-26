@@ -17,6 +17,6 @@ for rel in ${releases[@]}; do
 	cp -fu RPMS/$rel/*.x86_64.rpm $repodir/x86_64/
 
 	# Create repo data
-	createrepo $repodir
+	createrepo --delta $repodir
 done
 
