@@ -13,8 +13,11 @@ repo --name=rpmfusion-free-updates --baseurl=http://download1.rpmfusion.org/free
 repo --name=rpmfusion-non-free  --baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os
 repo --name=rpmfusion-non-free-updates --baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch
 
-# Chormium repo
-repo --name="Copr repo for chromium owned by spot" --baseurl=https://copr-be.cloud.fedoraproject.org/results/spot/chromium/fedora-$releasever-$basearch/ --cost=1000
+# Steam repo
+repo --name="Steam" --baseurl=http://negativo17.org/repos/steam/fedora-$releasever/$basearch/
+
+# Chromium repo
+repo --name="Copr repo for chromium owned by spot" --baseurl=https://copr-be.cloud.fedoraproject.org/results/spot/chromium/fedora-$releasever-$basearch/
 
 %packages
 
@@ -30,7 +33,7 @@ repo --name="Copr repo for chromium owned by spot" --baseurl=https://copr-be.clo
 @hardware-support
 @multimedia
 @networkmanager-submodules
-@printing
+@printin
 
 # Exclude unwanted packages from @anaconda-tools group
 -gfs2-utils
@@ -42,7 +45,6 @@ ozon-repos-extra
 ozon-desktop
 
 # Remove unwanted packages
--gthumb
 -bijiben
 -gnome-documents
 -gnome-boxes
