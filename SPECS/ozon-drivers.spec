@@ -1,12 +1,10 @@
-Summary:	Ozon drivers
-Name:		ozon-drivers
+Summary:	Semplicy drivers
+Name:		semplicy-drivers
 Version:	%{fedora}
 Release:	1%{?dist}
 
 License:	GPL-3
 Group:		System Environment/Base
-
-URL:		http://ozonos.github.io
 
 Requires:	akmod-wl
 Requires:	broadcom-wl
@@ -19,10 +17,10 @@ Requires:	kernel-headers
 BuildArch:	noarch
 
 %description
-The hardware drivers for Ozon desktop.
+The hardware drivers for Semplicy Linux.
 
 %files
 
 %changelog
-* Sat May 23 2015 Satyajit Sahoo <satya164@fedoraproject.org> - 0.0-1
-- Initial package for Fedora
+* Tue Jul 19 2016 Egor Mikhailov E. <xeneloid@yandex.ru> - 0.0-1
+- Initial package
