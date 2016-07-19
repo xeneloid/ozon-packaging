@@ -1,13 +1,13 @@
 %global theme	Ozon
 
-Name:		ozon-icon-theme
+Name:		semplicy-icon-theme
 Version:	0.3
 Release:	1%{?dist}
-Summary:	Default icon theme for OzonOS.
+Summary:	Default icon theme for Semplicy.
 Group:		User Interface/Desktops
 
 License:	GPL-3
-URL:		https://github.com/ozonos/ozon-icon-theme
+URL:		https://github.com/xeneloid/ozon-icon-theme
 Source0:	%{name}-%{version}.tar.gz
 
 BuildArch:  noarch
