@@ -1,7 +1,7 @@
 Summary:	Semplicy Linux default applications
 Name:		semplicy-default-apps
-Version:	%{fedora}
-Release:	2%{?dist}
+Version:	1
+Release:	0
 
 License:	GPL-3
 Group:		System Environment/Base
